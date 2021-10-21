@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../static/js/log.js" th:src="@{../js/log.js}"></script>
+</head>
+<body>
+<h3>Auth</h3>
+<input type="text" id="login" placeholder="login"><br>
+<input type="password" id="password" placeholder="password">
+
+<button onclick="login()">Submit</button><br>
+<a href="/">home</a><br>
+<div id="message"></div>
+</body>
+</html>

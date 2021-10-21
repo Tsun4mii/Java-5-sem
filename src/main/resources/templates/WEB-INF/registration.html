@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{../js/reg.js}"></script>
+</head>
+<body>
+<h3>Reg</h3>
+
+<input type="text" id="login" placeholder="login"><br>
+<input type="password" id="password" placeholder="password"><br>
+<input type="email" id="email" placeholder="email">
+<button onclick="reg()" th:method="post">Submit</button><br>
+<a href="/">home</a><br>
+<div id="message"></div>
+</body>
+</html>
