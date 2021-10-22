@@ -25,6 +25,7 @@ public class UserRentFormService implements IUserRentFormService {
         try {
             userRentFormRepository.deleteByUserIdAndScooterId(user_id, computerStuff_id);
         } catch (RepositoryException e) {
+
             throw new ServiceException(e);
         }
     }
