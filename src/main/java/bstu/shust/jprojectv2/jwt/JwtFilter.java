@@ -41,6 +41,7 @@ public class JwtFilter extends GenericFilterBean {
             UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(customUserDetails, null, customUserDetails.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(auth);
         }
+        
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
@@ -49,7 +50,7 @@ public class JwtFilter extends GenericFilterBean {
         if (hasText(bearer) && bearer.startsWith("Bearer ")) {
             return bearer.substring(7);
         }
-        
+
         return null;
     }
 }
