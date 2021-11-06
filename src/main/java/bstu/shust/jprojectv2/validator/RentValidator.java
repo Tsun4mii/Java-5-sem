@@ -17,7 +17,6 @@ public class RentValidator implements Validator {
     public void validate(Object o, Errors errors) {
         RentForm computerStuff =(RentForm)o;
         if(computerStuff.getId()<0){
-            
             errors.rejectValue("id","negative value");
         }
     }
