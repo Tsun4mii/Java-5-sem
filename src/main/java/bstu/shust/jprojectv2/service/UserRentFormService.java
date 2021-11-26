@@ -76,7 +76,6 @@ public class UserRentFormService implements IUserRentFormService {
             return userRentFormRepository.getAllByScooterExpirationDateLessThan(computerStuff_expirationDate);
         } catch (RepositoryException e) {
             throw new ServiceException(e);
-
         }
     }
 
