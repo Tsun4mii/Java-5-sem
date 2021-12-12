@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+h1, h2, h3{
+    font-family: Arial, sans-serif;
+    color: olivedrab;
+    text-align: center;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+button{
+    background-color: antiquewhite;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    border: 2px solid olivedrab;
+    border-radius: 25px;
+    padding: 5px 5px;
+    text-decoration-color: olive;
+}
+
+a{
+    font-family: Arial, sans-serif;
+    color: olivedrab;
+    text-align: center;
+}
+
+div .results{
+    font-family: Arial, sans-serif;
+    color: olivedrab;
+    text-align: center;
+    align-items: center;
+}
+
+div .row{
+    font-family: Arial, sans-serif;
+    color: olivedrab;
+    text-align: center;
+    align-items: center;
+
+}
+
+.container{
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px solid olivedrab;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.neededInfo{
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 85%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    color: olivedrab;
+    text-align: center;
+}
+
+.neededInfo table, tr, td, th{
+    border-collapse: collapse;
+    border: 2px solid olivedrab;
+}
+
+.neededInfo td{
+    margin-left: 20%;
+    margin-right: 25%;
+}
+

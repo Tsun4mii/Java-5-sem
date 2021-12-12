@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "scooter")
@@ -24,15 +25,19 @@ public class Scooter {
     private String description;
 
     @Column
+    private Date expirationDate;
+
+    @Column
     private int cost;
 
     public Scooter(){}
 
-    public Scooter(String name, String description, int cost)
+    public Scooter(String name, String description, int cost, Date date)
     {
         this.name = name;
         this.description = description;
         this.cost = cost;
+        this.expirationDate = date;
     }
 
 }

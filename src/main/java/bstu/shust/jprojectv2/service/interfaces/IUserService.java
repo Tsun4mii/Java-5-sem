@@ -1,5 +1,6 @@
 package bstu.shust.jprojectv2.service.interfaces;
 
+import bstu.shust.jprojectv2.exception.ServiceException;
 import bstu.shust.jprojectv2.models.User;
 import org.springframework.stereotype.Service;
 

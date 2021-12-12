@@ -1,6 +1,7 @@
 package bstu.shust.jprojectv2.service;
 
 
+import bstu.shust.jprojectv2.exception.ServiceException;
 import bstu.shust.jprojectv2.models.Role;
 import bstu.shust.jprojectv2.models.User;
 import bstu.shust.jprojectv2.models.UserRole;
@@ -33,8 +34,7 @@ public class UserService implements IUserService {
     public List<User> findAll(){
         return userRepository.findAll();
     }
-    public User findByLoginAndPassword(String login, String password)
-    {
+    public User findByLoginAndPassword(String login, String password){
         User user = findByLogin(login);
         if (user != null) {
             if (password.equals(user.getPassword())) {

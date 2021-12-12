@@ -15,6 +15,9 @@ async function login() {
     let data = {login: login, password: password};
     let result = await logUser(data);
     if (result.ok) {
+        let body = await result.text();
+        let info = JSON.parse(body);
+        localStorage.setItem('token', info['token']);
         window.location.replace(window.location.origin);
     } else {
         mes.innerHTML = 'Error occured';
