@@ -1,0 +1,10 @@
+2021-12-15 23:37:36 INFO  MainRestController:26 - running test
+2021-12-15 23:42:46 INFO  PageTest:26 - running main page test
+2021-12-15 23:42:47 INFO  PageTest:30 - running get /users api
+2021-12-15 23:45:01 DEBUG MainRestController:33 - getting all users
+2021-12-15 23:49:49 DEBUG MainRestController:33 - getting all users
+2021-12-15 23:50:01 DEBUG MainRestController:47 - try to login user
+2021-12-15 23:50:02 DEBUG MainRestController:33 - getting all users
+2021-12-16 10:00:46 INFO  PageTest:26 - running main page test
+2021-12-16 10:00:47 INFO  PageTest:30 - running get /users api
+2021-12-16 10:00:47 DEBUG MainRestController:33 - getting all users

@@ -102,7 +102,7 @@ function genLogReg() {
     let aDivLog = div();
     let aDivReg = div();
     let aLogin = a('/loginin', 'Login');
-    let aReg = a('/registration', 'Registration');
+    let aReg = a('/reg', 'Registration');
     aDivLog.appendChild(aLogin);
     aDivReg.appendChild(aReg);
     divLogReg.appendChild(aDivLog);

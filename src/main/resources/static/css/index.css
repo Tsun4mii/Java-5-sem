@@ -9,6 +9,42 @@ body{
     left: 50%;
     top: 50%;
 }
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+button{
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    padding: 0.7em 2em;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(84, 84, 84, 0.44);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+}
+
+
+
 .background .shape{
     height: 200px;
     width: 200px;
@@ -40,13 +76,13 @@ body{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     margin-left: auto;
     margin-right:  auto;
-    width: 700px;
+    width: auto;
     border-collapse: collapse;
-    border: 2px solid olivedrab;
+    border: 2px solid #8e8ca9;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
 }

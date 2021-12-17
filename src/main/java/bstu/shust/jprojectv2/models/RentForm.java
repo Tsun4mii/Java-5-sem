@@ -34,6 +34,7 @@ public class RentForm {
     @Column
     private boolean rent;
 
+    public RentForm(){}
     public RentForm(User user, String userName, String userSurname, Scooter scooter)
     {
         this.user = user;

@@ -21,8 +21,8 @@ public class ScooterService implements IScooterService{
     }
 
     @Override
-    public Scooter create(Scooter computerStuff)throws ServiceException {
-        return scooterRepository.save(computerStuff);
+    public Scooter create(Scooter Scooter)throws ServiceException {
+        return scooterRepository.save(Scooter);
     }
 
     @Override
@@ -70,7 +70,7 @@ public class ScooterService implements IScooterService{
     }
 
     @Override
-    public void updateComputerStuffById(Long id, String name, String description, int cost ) throws ServiceException{
+    public void updateScooterById(Long id, String name, String description, int cost ) throws ServiceException{
         try {
             scooterRepository.updateScooterById(id, name, description, cost);
         } catch (RepositoryException e) {

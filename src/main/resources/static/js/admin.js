@@ -51,7 +51,7 @@ async function genListOfCompStuffForAdmin() {
 async function getCertainComp(softObj) {
     console.log(softObj);
     let token = localStorage.getItem('token');
-    let soft = await adminGetComputerStuffByName(softObj['name'], token);
+    let soft = await adminGetScooterByName(softObj['name'], token);
 
     document.getElementById('name').value = soft['name'];
     document.getElementById('description').value = soft['description'];
@@ -71,11 +71,11 @@ async function genAdminCreateButton() {
     let cost = document.getElementById('cost').value;
     let expirationDate = document.getElementById('date').value;
 
-    let isNotExist = await isComputerStuffExistByName({name: name}, token);
+    let isNotExist = await isScooterExistByName({name: name}, token);
     let errMes = document.getElementById('errMes');
 
 
-    if (validateComputerStuff() && await isAuth() && isNotExist.ok) {
+    if (validateScooter() && await isAuth() && isNotExist.ok) {
         let name = document.getElementById('name').value;
 
 
@@ -85,7 +85,7 @@ async function genAdminCreateButton() {
             cost: cost,
             expirationDate: expirationDate
         };
-        await createComputerStuff(data, token);
+        await createScooter(data, token);
         console.log(data);
         errMes.innerHTML = 'Created';
         await genListOfCompStuffForAdmin();
@@ -98,13 +98,13 @@ async function genAdminDeleteButton() {
     let errMes = document.getElementById('errMes');
     let token = localStorage.getItem('token');
     let name = document.getElementById('name').value;
-    let isNotExist = await isComputerStuffExistByName({name: name}, token);
+    let isNotExist = await isScooterExistByName({name: name}, token);
     if (await isAuth() && !isNotExist.ok) {
 
-        let project = await adminGetComputerStuffByName(name, token);
-        let isNotExist = await isUserRentExistByComputerStuffId({id: project['id']}, token);
+        let project = await adminGetScooterByName(name, token);
+        let isNotExist = await isUserRentExistByScooterId({id: project['id']}, token);
         if (!isNotExist.ok) {
-            await deleteComputerStuffByNameA({name: name}, token);
+            await deleteScooterByNameA({name: name}, token);
             errMes.innerHTML = 'deleted';
             await genListOfCompStuffForAdmin();
 
@@ -117,7 +117,7 @@ async function genAdminDeleteButton() {
     }
 }
 
-function validateComputerStuff() {
+function validateScooter() {
     let nameL = document.getElementById('name').value.length;
     let descriptionL = document.getElementById('description').value.length;
     let cost = document.getElementById('cost').value;
@@ -151,13 +151,13 @@ async function genAdminUpdateButton() {
     let description = document.getElementById('description').value;
     let cost = document.getElementById('cost').value;
     let expirationDate = document.getElementById('date').value;
-    let isNotExist = await isComputerStuffExistByName({name: name}, token);
+    let isNotExist = await isScooterExistByName({name: name}, token);
     if (await isAuth() && !isNotExist.ok) {
 
-        let res = await adminGetComputerStuffByName(name, token);
+        let res = await adminGetScooterByName(name, token);
 
-        if (validateComputerStuff()) {
-            await updateComputerStuff({
+        if (validateScooter()) {
+            await updateScooter({
                 id: res['id'],
                 name: name,
                 description: description,
@@ -184,7 +184,7 @@ async function genAdminUpdate() {
 
 async function genAdminInfo() {
     let token = localStorage.getItem('token');
-    let usersRent = await getAllUserRentByComputerStuffExpirationDateLessThan({date: new Date()}, token);
+    let usersRent = await getAllUserRentByScooterExpirationDateLessThan({date: new Date()}, token);
 
     console.log(usersRent);
     let info = document.querySelector('.neededInfo');
@@ -219,23 +219,23 @@ async function genAdminInfo() {
             let tr = document.createElement('tr');
             for (let y = 0; y < 7; y++) {
                 let th = document.createElement('th');
-                let computerStuff = usersRent[i]['computerStuff'];
-
+                let Scooter = usersRent[i]['scooter'];
+                console.log(usersRent[i]['userName']);
                 switch (y) {
                     case 0: {
-                        th.innerHTML = usersRent['name'];
+                        th.innerHTML = usersRent[i]['userName'];
                         break;
                     }
                     case 1: {
-                        th.innerHTML = usersRent['surname'];
+                        th.innerHTML = usersRent[i]['userSurname'];
                         break;
                     }
                     case 2: {
-                        th.innerHTML = computerStuff['name'];
+                        th.innerHTML = Scooter['name'];
                         break;
                     }
                     case 3: {
-                        th.innerHTML = computerStuff['expirationDate'];
+                        th.innerHTML = Scooter['expirationDate'];
                         break;
                     }
                     case 4: {

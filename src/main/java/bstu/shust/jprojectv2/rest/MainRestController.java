@@ -9,6 +9,7 @@ import bstu.shust.jprojectv2.exception.ControllerException;
 import bstu.shust.jprojectv2.jwt.JwtProvider;
 import bstu.shust.jprojectv2.models.User;
 import bstu.shust.jprojectv2.service.UserService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -24,15 +25,27 @@ public class MainRestController {
     @Autowired
     private JwtProvider jwtProvider;
 
+    private static final Logger logger = Logger.getLogger(MainRestController.class);
+
     @PostMapping("/users")
-    public List<User> getUsers()
-    {
-        return userService.findAll();
+    public List<User> getUsers() throws ControllerException {
+        try {
+            logger.debug("getting all users");
+
+            return userService.findAll();
+        } catch (Exception e) {
+            logger.error("error get all users");
+
+            throw new ControllerException("getUsers", e);
+        }
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody AuthRequest authRequest)
+    public ResponseEntity<?> loginUser(@RequestBody AuthRequest authRequest) throws ControllerException
     {
+        try{
+        logger.debug("try to login user");
+
         User user = userService.findByLoginAndPassword(authRequest.getLogin(), authRequest.getPassword());
         if(user != null)
         {
@@ -43,13 +56,19 @@ public class MainRestController {
         }
         else
         {
-            return new ResponseEntity<>(HttpStatus.FOUND);
+            throw new ControllerException("not such user");
+        }
+        } catch (ControllerException e) {
+            logger.error("error login");
+
+            throw new ControllerException("auth", e);
         }
     }
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody RegistrationRequest registrationRequest)
     {
+        logger.debug("try to register user");
         if(!userService.existsUserByLogin(registrationRequest.getLogin()))
         {
             User user = new User();

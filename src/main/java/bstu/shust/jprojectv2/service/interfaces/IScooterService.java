@@ -25,7 +25,7 @@ public interface IScooterService {
     Scooter getByName(String name)throws ServiceException, bstu.shust.jprojectv2.exception.ServiceException;
 
     @Transactional
-    void updateComputerStuffById(
+    void updateScooterById(
             Long id,
             String name,
             String description,

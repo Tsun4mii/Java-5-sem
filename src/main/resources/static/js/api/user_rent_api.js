@@ -50,7 +50,7 @@ async function getAllUserRentByRent(data, token) {
 }
 
 async function isUserRentExistByComputerStuffId(data, token) {
-    return await fetch("/admin/isUserRentExistByComputerStuffId",{
+    return await fetch("/admin/isUserRentExistByScooterId",{
         method :'POST',
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -82,8 +82,8 @@ async function createUserRent(data, token) {
 
     });
 }
-async function getAllUserRentByComputerStuffExpirationDateLessThan(data, token) {
-    return await fetch("/admin/getAllByComputerStuffExpirationDateLessThan",{
+async function getAllUserRentByScooterExpirationDateLessThan(data, token) {
+    return await fetch("/admin/getAllByScooterExpirationDateLessThan",{
         method :'POST',
         headers: {
             'Authorization': `Bearer ${token}`,

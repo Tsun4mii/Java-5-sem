@@ -8,7 +8,7 @@ public class ScooterRequestNoIdRent {
     private String name;
     private String description;
     private int cost;
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date expirationDate;
 
 

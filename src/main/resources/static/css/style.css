@@ -2,46 +2,60 @@
 
 h1, h2, h3{
     font-family: Arial, sans-serif;
-    color: olivedrab;
+    color: #524d77;
     text-align: center;
 }
 
 body{
-    background-color: antiquewhite;
+    background-color: #8e8ca9;
     font-family: sans-serif;
     font-weight: 300;
 }
 
 button{
-    background-color: antiquewhite;
+    background-color: #8e8ca9;
     margin-bottom: 5px;
     font-family: Arial, sans-serif;
     border-collapse: collapse;
-    border: 2px solid olivedrab;
+    border: 2px solid #524d77;
     border-radius: 25px;
     padding: 5px 5px;
-    text-decoration-color: olive;
+    text-decoration-color: #605bab;
 }
 
 a{
     font-family: Arial, sans-serif;
-    color: olivedrab;
+    color: #524d77;
     text-align: center;
 }
 
 div .results{
     font-family: Arial, sans-serif;
-    color: olivedrab;
+    color: #524d77;
     text-align: center;
     align-items: center;
+    display: none;
+    visibility: hidden;
 }
 
 div .row{
     font-family: Arial, sans-serif;
-    color: olivedrab;
+    color: #524d77;
     text-align: center;
     align-items: center;
+    align-content: center;
 
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .container{
@@ -50,13 +64,13 @@ div .row{
     margin-right: 25%;
     width: 50%;
     border-collapse: collapse;
-    border: 2px solid olivedrab;
+    border: 2px solid #524d77;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: burlywood;
+    background-color: #8e8ca9;
 }
 
 .neededInfo{
@@ -71,13 +85,13 @@ div .row{
     align-items: center;
 
     font-family: Arial, sans-serif;
-    color: olivedrab;
+    color: #524d77;
     text-align: center;
 }
 
 .neededInfo table, tr, td, th{
     border-collapse: collapse;
-    border: 2px solid olivedrab;
+    border: 2px solid #524d77;
 }
 
 .neededInfo td{

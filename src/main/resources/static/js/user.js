@@ -30,7 +30,7 @@ function validateCard() {
 
 }
 
-async function genUserCreateButton(user , computerStuff) {
+async function genUserCreateButton(user , Scooter) {
     let token = localStorage.getItem('token');
     let userData = await getUserByToken(token);
     let text = await userData.text();
@@ -46,7 +46,7 @@ async function genUserCreateButton(user , computerStuff) {
             user:user,
             name: name,
             surname: surname,
-            computerStuff:computerStuff
+            scooter:Scooter
         };
         await createUserRent(data, token);
 
@@ -75,7 +75,7 @@ async function getCertainCompUser(listProjectElement) {
     let text = await userData.text();
     let user = JSON.parse(text);
 
-    let comp = await userGetComputerStuffByName(listProjectElement['name'], token);
+    let comp = await userGetScooterByName(listProjectElement['name'], token);
 
     await genCard();
     await genCardCreate(user,comp);
@@ -110,6 +110,7 @@ async function genUserInfo() {
     let userData = await getUserByToken(token);
     let text = await userData.text();
     let textUserData = JSON.parse(text);
+    console.log(textUserData);
 
     let userRents = await getAllUserRentByUserId(textUserData['id'], token);
 
@@ -137,7 +138,7 @@ async function genUserInfo() {
             table.appendChild(tr);
         }
         let tr = document.createElement('tr');
-
+        console.log(userRents)
         for (let y = 0; y < 6; y++) {
             let th = document.createElement('th');
             switch (y) {
@@ -150,11 +151,11 @@ async function genUserInfo() {
                     break;
                 }
                 case 2: {
-                    th.innerHTML = userRents[i]['computerStuff']['name'];
+                    th.innerHTML = userRents[i]['scooter']['name'];
                     break;
                 }
                 case 3: {
-                    th.innerHTML = userRents[i]['computerStuff']['expirationDate'];
+                    th.innerHTML = userRents[i]['scooter']['expirationDate'];
                     break;
                 }
                 case 4: {
@@ -168,7 +169,7 @@ async function genUserInfo() {
                         async function deleteComp(userRentElement) {
                             let token = localStorage.getItem('token');
                             console.log(userRentElement['userName']);
-                            await deleteComputerStuffByNameU({name:userRentElement['userName']},token);
+                            await deleteScooterByNameU({name:userRentElement['userName']},token);
                             await genUserInfo();
 
                         }
