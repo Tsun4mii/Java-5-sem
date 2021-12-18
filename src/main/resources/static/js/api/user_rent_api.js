@@ -49,7 +49,7 @@ async function getAllUserRentByRent(data, token) {
     });
 }
 
-async function isUserRentExistByComputerStuffId(data, token) {
+async function isUserRentExistByScooterId(data, token) {
     return await fetch("/admin/isUserRentExistByScooterId",{
         method :'POST',
         headers: {

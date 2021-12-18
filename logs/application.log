@@ -8,3 +8,32 @@
 2021-12-16 10:00:46 INFO  PageTest:26 - running main page test
 2021-12-16 10:00:47 INFO  PageTest:30 - running get /users api
 2021-12-16 10:00:47 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:02:43 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:03:20 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:03:34 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:03:34 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:04:15 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:04:26 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:04:26 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:05:28 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:07:39 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:11:47 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:12:10 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:12:21 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:12:21 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:12:45 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:12:53 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:12:53 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:17:15 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:17:35 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:17:46 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:17:46 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:18:30 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:18:38 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:18:38 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:19:03 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:19:12 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:19:12 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:19:23 DEBUG MainRestController:33 - getting all users
+2021-12-18 20:19:31 DEBUG MainRestController:47 - try to login user
+2021-12-18 20:19:31 DEBUG MainRestController:33 - getting all users
