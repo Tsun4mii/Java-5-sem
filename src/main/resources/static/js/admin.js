@@ -201,11 +201,11 @@ async function genAdminInfo() {
             let th2 = document.createElement('th');
             th2.innerHTML = 'user surname';
             let th3 = document.createElement('th');
-            th3.innerHTML = 'comp stuff name';
+            th3.innerHTML = 'scooter name';
             let th4 = document.createElement('th');
             th4.innerHTML = 'expiration date';
             let th5 = document.createElement('th');
-            th5.innerHTML = 'need to rent?';
+            th5.innerHTML = 'Cancel rent?';
 
             tr.appendChild(th1);
             tr.appendChild(th2);
@@ -239,7 +239,7 @@ async function genAdminInfo() {
                         break;
                     }
                     case 4: {
-                        let subButton = buttonWithParams('rent');
+                        let subButton = buttonWithParams('Cancel');
                         subButton.onclick = async () => {
                             await rent(usersRent[i], token);
                         };

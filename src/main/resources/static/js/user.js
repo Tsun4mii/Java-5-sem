@@ -126,7 +126,7 @@ async function genUserInfo() {
             let th4 = document.createElement('th');
             th4.innerHTML = 'Expiration date';
             let th5 = document.createElement('th');
-            th5.innerHTML = 'Rent';
+            th5.innerHTML = 'Expired?';
             let th6 = document.createElement('th');
             th6.innerHTML = 'Delete';
             tr.appendChild(th1);
