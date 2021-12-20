@@ -45,3 +45,16 @@
 2021-12-18 21:36:11 DEBUG MainRestController:47 - try to login user
 2021-12-18 21:36:11 DEBUG MainRestController:33 - getting all users
 2021-12-18 21:38:09 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:46:54 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:47:06 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:47:22 DEBUG MainRestController:47 - try to login user
+2021-12-20 09:47:22 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:51:12 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:51:26 DEBUG MainRestController:47 - try to login user
+2021-12-20 09:51:26 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:55:40 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:55:54 DEBUG MainRestController:47 - try to login user
+2021-12-20 09:55:55 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:59:14 DEBUG MainRestController:33 - getting all users
+2021-12-20 09:59:24 DEBUG MainRestController:47 - try to login user
+2021-12-20 09:59:24 DEBUG MainRestController:33 - getting all users
