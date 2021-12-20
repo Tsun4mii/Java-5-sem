@@ -10,6 +10,7 @@ import bstu.shust.jprojectv2.models.Scooter;
 import bstu.shust.jprojectv2.repository.UserRentFormRepository;
 import bstu.shust.jprojectv2.service.ScooterService;
 import bstu.shust.jprojectv2.service.UserRentFormService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,9 @@ public class ScooterRestController {
     private UserRentFormService userRentFormService;
     @Autowired
     private UserRentFormRepository userRentFormRepository;
+
+    private static final Logger logger = Logger.getLogger(ScooterRestController.class);
+
     @PostMapping("/admin/createScooter")
     public ResponseEntity<?> createScooter(@RequestBody ScooterRequestNoIdRent scooterRequestNoIdRent) throws ControllerException {
         Scooter stuff = new Scooter(
@@ -128,6 +132,7 @@ public class ScooterRestController {
             stuff.setExpirationDate(simpleDateFormat.parse(date));
             return new ResponseEntity<>(stuff,HttpStatus.OK);
         } catch (ServiceException e) {
+            logger.error("Error occured");
             throw new ControllerException(e);
 
         }
