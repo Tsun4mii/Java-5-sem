@@ -86,7 +86,7 @@ public class ScooterRestController {
 
     }
     @GetMapping("/admin/getAllScootersForAdmin")
-    public ResponseEntity<?> getAllCompsForAdmin() throws ControllerException{
+    public ResponseEntity<?> getAllScootersForAdmin() throws ControllerException{
         try {
             return new ResponseEntity<>(scooterService.getAll(),HttpStatus.OK);
         } catch (ServiceException e) {

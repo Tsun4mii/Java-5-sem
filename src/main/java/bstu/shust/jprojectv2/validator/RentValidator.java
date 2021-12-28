@@ -15,8 +15,8 @@ public class RentValidator implements Validator {
 
     @Override
     public void validate(Object o, Errors errors) {
-        RentForm computerStuff =(RentForm)o;
-        if(computerStuff.getId()<0){
+        RentForm scooter =(RentForm)o;
+        if(scooter.getId()<0){
             errors.rejectValue("id","negative value");
         }
     }

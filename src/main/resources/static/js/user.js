@@ -6,7 +6,7 @@ async function genCard() {
 
     let name = input('text', 'name', 'Name', '');
 
-    let surname = input('text', 'surname', 'Surname', 'surnameValue');
+    let surname = input('text', 'surname', 'Surname', '');
 
 
     info.appendChild(name);
