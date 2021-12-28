@@ -33,5 +33,8 @@
 <button onclick="login()">Submit</button><br>
 <a href="/">home</a><br>
 <div id="message"></div>
+<div th:if="${message}">
+    <h1 th:utext="${message}" style="font-size: medium"/>
+</div>
 </body>
 </html>

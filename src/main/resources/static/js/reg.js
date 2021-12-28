@@ -32,7 +32,8 @@ async function reg() {
         let data = {login: login, password: password,email:email};
         let res = await regUser(data);
         if (res.ok) {
-            window.location.replace(window.location.origin);
+            mes.innerHTML = "Check your email address to continue your registration"
+            //window.location.replace(window.location.origin);
         } else {
             mes.innerHTML = "this user already exist";
         }

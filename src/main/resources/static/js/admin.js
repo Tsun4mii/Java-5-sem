@@ -32,7 +32,7 @@ async function genListOfCompStuffForAdmin() {
     let token = localStorage.getItem('token');
     let someList = document.querySelector('.someList');
     someList.innerHTML = '';
-    let listProject = await getAllCompsForAdmin(token);
+    let listProject = await getAllScootersForAdmin(token);
 
     for (let i = 0; i < listProject.length; i++) {
         let genDiv = div();

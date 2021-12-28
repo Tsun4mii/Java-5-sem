@@ -6,7 +6,7 @@ async function genUserSearchButton() {
     }else{
         let someList = document.querySelector('.someList');
         someList.innerHTML = '';
-        let listProject = await getAllCompsForUser(token);
+        let listProject = await getAllScootersForUser(token);
 
         for (let i = 0; i < listProject.length; i++) {
             let genDiv = div();

@@ -8,15 +8,19 @@ import bstu.shust.jprojectv2.dto.UserResponse;
 import bstu.shust.jprojectv2.exception.ControllerException;
 import bstu.shust.jprojectv2.jwt.JwtProvider;
 import bstu.shust.jprojectv2.models.User;
+import bstu.shust.jprojectv2.service.MailSender;
 import bstu.shust.jprojectv2.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class MainRestController {
@@ -24,6 +28,8 @@ public class MainRestController {
     private UserService userService;
     @Autowired
     private JwtProvider jwtProvider;
+    @Autowired
+    private MailSender mailSender;
 
     private static final Logger logger = Logger.getLogger(MainRestController.class);
 
@@ -61,7 +67,7 @@ public class MainRestController {
         } catch (ControllerException e) {
             logger.error("error login");
 
-            throw new ControllerException("auth", e);
+            throw new ControllerException("No such user with this credentials", e);
         }
     }
 
@@ -75,13 +81,38 @@ public class MainRestController {
             user.setPassword(registrationRequest.getPassword());
             user.setLogin(registrationRequest.getLogin());
             user.setEmail(registrationRequest.getEmail());
+            user.setActive(true);
+            user.setActivationCode(UUID.randomUUID().toString());
             userService.saveUser(user);
+            if(!user.getEmail().isEmpty()){
+                String message = String.format("Hello, %s!\n " +
+                                "Welcome to my Java project! Please, visit next link: http://localhost:8080/activate/%s",
+                        user.getLogin(), user.getActivationCode());
+                mailSender.sendMail(user.getEmail(), "Activation code", message);
+            }
             return new ResponseEntity<>(HttpStatus.OK);
         }
         else {
             return new ResponseEntity<>(HttpStatus.FOUND);
         }
     }
+
+    @GetMapping("/activate/{code}")
+    public ModelAndView activate(Model model, @PathVariable String code) {
+        boolean isActivated = userService.activateUser(code);
+
+        if (isActivated) {
+            model.addAttribute("message", "User successfully activated");
+
+        } else {
+            model.addAttribute("message", "Activation code is not found!");
+        }
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login2");
+        return modelAndView;
+    }
+
     @PostMapping("/authorized")
     public ResponseEntity<?> isAuthorized() throws ControllerException {
         return new ResponseEntity<>(HttpStatus.OK);

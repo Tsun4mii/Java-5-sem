@@ -29,4 +29,8 @@ public class User {
 
     @Column
     private String email;
+
+    private boolean active;
+
+    private String activationCode;
 }

@@ -84,8 +84,8 @@ async function createScooter(data, token) {
 
     });
 }
-async function getAllCompsForAdmin(token) {
-    return await fetch(`/admin/getAllCompsForAdmin`, {
+async function getAllScootersForAdmin(token) {
+    return await fetch(`/admin/getAllScootersForAdmin`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
@@ -97,8 +97,8 @@ async function getAllCompsForAdmin(token) {
         return data;
     });
 }
-async function getAllCompsForUser(token) {
-    return await fetch(`/user/getAllCompsForUser`, {
+async function getAllScootersForUser(token) {
+    return await fetch(`/user/getAllScootersForUser`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',

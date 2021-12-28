@@ -54,4 +54,19 @@ public class UserService implements IUserService {
     public User findById(Long id){
         return userRepository.getById(id);
     }
+
+    public boolean activateUser(String code) {
+        User user = userRepository.findByActivationCode(code);
+
+        if (user == null) {
+            user.setActive(false);
+            return false;
+        }
+
+        user.setActivationCode(null);
+        user.setActive(true);
+        userRepository.save(user);
+
+        return true;
+    }
 }

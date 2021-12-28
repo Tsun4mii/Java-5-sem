@@ -50,3 +50,54 @@
 2021-12-20 09:59:14 DEBUG MainRestController:33 - getting all users
 2021-12-20 09:59:24 DEBUG MainRestController:47 - try to login user
 2021-12-20 09:59:24 DEBUG MainRestController:33 - getting all users
+2021-12-26 23:43:58 DEBUG MainRestController:39 - getting all users
+2021-12-26 23:43:59 DEBUG MainRestController:39 - getting all users
+2021-12-26 23:44:07 DEBUG MainRestController:53 - try to login user
+2021-12-26 23:44:07 DEBUG MainRestController:39 - getting all users
+2021-12-26 23:44:09 DEBUG MainRestController:39 - getting all users
+2021-12-26 23:44:25 DEBUG MainRestController:77 - try to register user
+2021-12-26 23:44:36 DEBUG MainRestController:39 - getting all users
+2021-12-26 23:46:25 DEBUG MainRestController:77 - try to register user
+2021-12-26 23:46:36 DEBUG MainRestController:39 - getting all users
+2021-12-26 23:47:29 DEBUG MainRestController:53 - try to login user
+2021-12-26 23:47:29 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:24:18 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:24:20 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:24:33 DEBUG MainRestController:53 - try to login user
+2021-12-27 23:24:33 ERROR MainRestController:68 - error login
+2021-12-27 23:24:41 DEBUG MainRestController:53 - try to login user
+2021-12-27 23:24:41 ERROR MainRestController:68 - error login
+2021-12-27 23:24:43 DEBUG MainRestController:53 - try to login user
+2021-12-27 23:24:43 ERROR MainRestController:68 - error login
+2021-12-27 23:24:44 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:24:58 DEBUG MainRestController:53 - try to login user
+2021-12-27 23:24:59 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:25:00 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:25:00 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:25:02 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:27:01 DEBUG MainRestController:39 - getting all users
+2021-12-27 23:27:16 DEBUG MainRestController:53 - try to login user
+2021-12-27 23:27:16 ERROR MainRestController:68 - error login
+2021-12-27 23:29:40 DEBUG MainRestController:53 - try to login user
+2021-12-27 23:29:40 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:15:51 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:16:09 DEBUG MainRestController:77 - try to register user
+2021-12-28 00:16:22 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:16:58 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:16:58 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:16:59 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:21:29 DEBUG MainRestController:77 - try to register user
+2021-12-28 00:21:41 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:22:27 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:23:02 DEBUG MainRestController:77 - try to register user
+2021-12-28 00:24:08 DEBUG MainRestController:77 - try to register user
+2021-12-28 00:24:22 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:03 DEBUG MainRestController:77 - try to register user
+2021-12-28 00:26:39 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:42 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:42 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:44 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:44 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:45 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:45 DEBUG MainRestController:39 - getting all users
+2021-12-28 00:26:46 DEBUG MainRestController:39 - getting all users
